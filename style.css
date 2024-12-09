@@ -1,0 +1,715 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #d5d6d1; /* Soft Gray */
+    color: #0a273a; /* Deep Navy Blue for text */
+}
+
+/* Top Logo */
+#top-logo {
+    text-align: center;
+    margin: 100px 0 20px; /* Top margin added to avoid overlap with the navbar */
+}
+
+.top-logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.top-logo-text {
+    font-size: 50px;
+    font-weight: bold;
+    color: #1e3c4f; /* Dark Blue-Green */
+}
+
+#top-logo img {
+    max-width: 150px;
+}
+
+/* Navigation Bar */
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #1e3c4f; /* Dark Blue-Green */
+    color: #d5d6d1; /* Soft Gray */
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease; /* Smooth size adjustment */
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px; /* Default padding */
+    max-width: 1200px;
+    margin: 0 auto;
+    transition: padding 0.3s ease; /* Smooth padding transition */
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    max-width: 40px;
+    margin-right: 10px;
+    transition: max-width 0.3s ease;
+}
+
+.brand-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #d5d6d1;
+    transition: font-size 0.3s ease;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links li a {
+    color: #d5d6d1; /* Soft Gray */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #5f9ebb; /* Soft Sky Blue */
+}
+
+/* Shrinked Navbar */
+#navbar.shrink .navbar-container {
+    padding: 10px 20px; /* Reduced padding when scrolling */
+}
+
+#navbar.shrink .logo {
+    max-width: 30px; /* Reduce logo size */
+}
+
+#navbar.shrink .brand-name {
+    font-size: 14px; /* Smaller font size for brand name */
+}
+
+/* Hero Section */
+#hero {
+    background-color: #1e3c4f; /* Dark Blue-Green */
+    padding: 120px 20px 20px; /* Added top padding to offset the fixed navbar */
+    text-align: center;
+    color: #d5d6d1; /* Soft Gray for text */
+}
+
+#hero .logo {
+    max-width: 150px;
+    margin-bottom: 20px;
+}
+
+.form-container {
+    background-color: #d5d6d1; /* Soft Gray */
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 400px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    color: #0a273a; /* Deep Navy Blue for text */
+}
+
+.form-container input, .form-container button {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #486e83; /* Cool Slate border */
+    background-color: #d5d6d1; /* Soft Gray */
+    color: #0a273a; /* Deep Navy Blue for text */
+}
+
+.form-container button {
+    background-color: #5f9ebb; /* Soft Sky Blue for button */
+    color: #d5d6d1; /* Soft Gray for text */
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form-container button:hover {
+    background-color: #486e83; /* Cool Slate for hover */
+}
+
+/* Testimonials Section */
+#testimonials {
+    background-color: #d5d6d1; /* Soft Gray */
+    padding: 40px 20px;
+}
+
+.testimonial-container {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+    color: #0a273a; /* Deep Navy Blue for text */
+}
+
+.testimonial {
+    margin: 20px 0;
+    font-style: italic;
+    color: #5f9ebb; /* Soft Sky Blue */
+}
+
+/* Services Section */
+#services {
+    background-color: #5f9ebb; /* Soft Sky Blue */
+    padding: 40px 20px;
+    text-align: center;
+    color: #d5d6d1; /* Soft Gray for text */
+}
+
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.service {
+    max-width: 300px;
+    margin: 20px;
+    background-color: #1e3c4f; /* Dark Blue-Green */
+    padding: 20px;
+    border-radius: 8px;
+    color: #d5d6d1; /* Soft Gray for text */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.service h3 {
+    color: #486e83; /* Cool Slate */
+}
+
+/* Call-to-Action Section */
+#cta {
+    background-color: #486e83; /* Cool Slate */
+    color: #d5d6d1; /* Soft Gray for text */
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#cta button {
+    background-color: #1e3c4f; /* Dark Blue-Green for button */
+    color: #d5d6d1; /* Soft Gray for text */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+#cta button:hover {
+    background-color: #5f9ebb; /* Soft Sky Blue for hover */
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+/* Contact Me Section */
+#contact {
+    background-color: #486e83; /* Cool Slate */
+    color: #d5d6d1; /* Soft Gray for text */
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.contact-container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.contact-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #d5d6d1; /* Soft Gray */
+}
+
+.contact-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-container label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.contact-container input,
+.contact-container textarea {
+    margin-top: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #d5d6d1;
+    background-color: #d5d6d1; /* Soft Gray */
+    color: #0a273a; /* Deep Navy Blue */
+}
+
+.contact-container button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #1e3c4f; /* Dark Blue-Green */
+    color: #d5d6d1; /* Soft Gray */
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-container button:hover {
+    background-color: #5f9ebb; /* Soft Sky Blue */
+}
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #d5d6d1; /* Soft Gray */
+    color: #0a273a; /* Deep Navy Blue for text */
+}
+
+/* Top Logo */
+#top-logo {
+    text-align: center;
+    margin: 100px 0 20px;
+}
+
+.top-logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.top-logo-text {
+    font-size: 50px;
+    font-weight: bold;
+    color: #1e3c4f;
+}
+
+#top-logo img {
+    max-width: 150px;
+}
+
+/* Navigation Bar */
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #1e3c4f;
+    color: #d5d6d1;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    transition: padding 0.3s ease;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    max-width: 40px;
+    margin-right: 10px;
+    transition: max-width 0.3s ease;
+}
+
+.brand-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #d5d6d1;
+    transition: font-size 0.3s ease;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links li a {
+    color: #d5d6d1;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #5f9ebb;
+}
+
+/* About Me Section */
+#about {
+    background-color: #486e83; /* Cool Slate */
+    color: #d5d6d1; /* Soft Gray */
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.about-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.about-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+
+.about-container p {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #d5d6d1;
+}
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #d5d6d1; /* Soft Gray */
+    color: #0a273a; /* Deep Navy Blue for text */
+}
+
+/* Top Logo */
+#top-logo {
+    text-align: center;
+    margin: 100px 0 20px;
+}
+
+.top-logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.top-logo-text {
+    font-size: 50px;
+    font-weight: bold;
+    color: #1e3c4f;
+}
+
+#top-logo img {
+    max-width: 150px;
+}
+
+/* Navigation Bar */
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #1e3c4f;
+    color: #d5d6d1;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    transition: padding 0.3s ease;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    max-width: 40px;
+    margin-right: 10px;
+    transition: max-width 0.3s ease;
+}
+
+.brand-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #d5d6d1;
+    transition: font-size 0.3s ease;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links li a {
+    color: #d5d6d1;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #5f9ebb;
+}
+
+/* About Me Section */
+#about,
+#detailed-about {
+    background-color: #486e83; /* Cool Slate */
+    color: #d5d6d1; /* Soft Gray */
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.about-container,
+.detailed-about-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.about-container h2,
+.detailed-about-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+
+.about-container p,
+.detailed-about-container p {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #d5d6d1;
+}
+
+.about-container a,
+.detailed-about-container a {
+    color: #1e3c4f; /* Dark Blue-Green */
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.about-container a:hover,
+.detailed-about-container a:hover {
+    text-decoration: underline;
+}
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #d5d6d1; /* Soft Gray */
+    color: #0a273a; /* Deep Navy Blue for text */
+}
+
+/* Top Logo */
+#top-logo {
+    text-align: center;
+    margin: 100px 0 20px;
+}
+
+.top-logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.top-logo-text {
+    font-size: 50px;
+    font-weight: bold;
+    color: #1e3c4f;
+}
+
+#top-logo img {
+    max-width: 150px;
+}
+
+/* Navigation Bar */
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #1e3c4f;
+    color: #d5d6d1;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    transition: padding 0.3s ease;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    max-width: 40px;
+    margin-right: 10px;
+    transition: max-width 0.3s ease;
+}
+
+.brand-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #d5d6d1;
+    transition: font-size 0.3s ease;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links li a {
+    color: #d5d6d1;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #5f9ebb;
+}
+
+/* About Me Section */
+#about {
+    background-color: #486e83; /* Cool Slate */
+    color: #d5d6d1; /* Soft Gray */
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.about-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.about-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+
+.about-container p {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #d5d6d1;
+}
+
+/* Contact Me Section */
+#contact {
+    background-color: #486e83; /* Cool Slate */
+    color: #d5d6d1; /* Soft Gray */
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.contact-container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.contact-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #d5d6d1;
+}
+
+.contact-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-container label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.contact-container input,
+.contact-container textarea {
+    margin-top: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #d5d6d1;
+    background-color: #d5d6d1;
+    color: #0a273a;
+}
+
+.contact-container button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #1e3c4f;
+    color: #d5d6d1;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-container button:hover {
+    background-color: #5f9ebb;
+}
