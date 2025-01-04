@@ -753,3 +753,12 @@ img {
         align-items: center;
     }
 }
+@media (max-width: 768px) {
+    #top-logo {
+        margin-bottom: 30px; /* Increase spacing only for mobile */
+    }
+
+    .navbar-container {
+        padding: 15px 0; /* Add extra padding inside navbar only on mobile */
+    }
+}
