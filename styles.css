@@ -713,3 +713,43 @@ body {
 .contact-container button:hover {
     background-color: #5f9ebb;
 }
+/* Universal fixes for mobile responsiveness */
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    font-family: Arial, sans-serif;
+}
+
+* {
+    box-sizing: border-box; /* Ensure padding doesn't break layouts */
+}
+
+img {
+    max-width: 100%; /* Scale images down for smaller screens */
+    height: auto;
+}
+
+.container, .navbar-container {
+    width: 100%; /* Ensure containers fit the viewport */
+    max-width: 1200px; /* Keep them reasonable for larger screens */
+    margin: 0 auto;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap; /* Ensure links wrap on smaller screens */
+    justify-content: center; /* Center links */
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column; /* Stack links vertically on mobile */
+        padding: 0;
+    }
+
+    .top-logo-container {
+        flex-direction: column; /* Stack logo and text */
+        align-items: center;
+    }
+}
