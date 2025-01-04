@@ -17,15 +17,11 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 document.getElementById('contactForm').addEventListener('submit', function(event) {
-    // Keep the current submission behavior
-    const form = event.target;
+    const form = event.target; // Reference the form being submitted
 
-    // Check if Formspree submission was successful
+    // Let the form submit naturally, then clear the fields
     setTimeout(() => {
-        // After a slight delay (ensures form submission is processed), clear the form fields
-        if (document.referrer.includes('formspree.io')) {
-            form.reset(); // Clear all input fields in the form
-            console.log('Form fields cleared after successful submission!');
-        }
-    }, 1000); // Adjust delay if needed to match Formspree response time
+        form.reset(); // Clear all form fields
+        console.log('Form fields cleared after submission!');
+    }, 500); // Slight delay to ensure submission occurs first
 });
