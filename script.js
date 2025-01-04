@@ -17,11 +17,15 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 document.getElementById('contactForm').addEventListener('submit', function(event) {
-    const form = event.target; // Reference the form being submitted
+    const form = event.target;
 
-    // Let the form submit naturally, then clear the fields
+    // Allow the form to submit normally
     setTimeout(() => {
-        form.reset(); // Clear all form fields
-        console.log('Form fields cleared after submission!');
-    }, 500); // Slight delay to ensure submission occurs first
+        // Directly clear each field
+        document.getElementById('name').value = '';
+        document.getElementById('email').value = '';
+        document.getElementById('message').value = '';
+
+        console.log('Text boxes cleared after successful submission!');
+    }, 500); // Small delay to ensure submission completes
 });
