@@ -16,16 +16,20 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
 });
-document.getElementById('contactForm').addEventListener('submit', function(event) {
-    const form = event.target;
+document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('contactForm');
+    if (form) {
+        form.addEventListener('submit', function (event) {
+            setTimeout(() => {
+                // Directly clear each field
+                document.getElementById('name').value = '';
+                document.getElementById('email').value = '';
+                document.getElementById('message').value = '';
 
-    // Allow the form to submit normally
-    setTimeout(() => {
-        // Directly clear each field
-        document.getElementById('name').value = '';
-        document.getElementById('email').value = '';
-        document.getElementById('message').value = '';
-
-        console.log('Text boxes cleared after successful submission!');
-    }, 500); // Small delay to ensure submission completes
+                console.log('Text boxes cleared after successful submission!');
+            }, 500); // Small delay to ensure submission completes
+        });
+    } else {
+        console.error('Form with ID "contactForm" not found!');
+    }
 });
