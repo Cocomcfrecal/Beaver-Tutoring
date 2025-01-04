@@ -16,3 +16,10 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
 });
+// Add an event listener to the form
+document.querySelector('form').addEventListener('submit', function(event) {
+    // Clear the text boxes after submission
+    document.getElementById('name').value = '';
+    document.getElementById('email').value = '';
+    document.getElementById('message').value = '';
+});
